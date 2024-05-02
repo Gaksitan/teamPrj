@@ -157,8 +157,6 @@ public class MainController {
 		return "0";
 	}
 	
-<<<<<<< HEAD
-=======
 	@RequestMapping("/regLoginCheck")
 	public @ResponseBody String regLoginCheck(@RequestParam("id")String id) {
 
@@ -203,5 +201,4 @@ public class MainController {
 	
 	
 	
->>>>>>> fc42902 (게시물에 쓰인 댓글리스트 보이게 하고, 댓글등록기능 추가)
 }
