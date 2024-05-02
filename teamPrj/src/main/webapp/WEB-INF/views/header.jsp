@@ -10,6 +10,7 @@
 <body>
 	<header>
 			<a class="home_btn" href="/">home</a>
+			<span id="name"></span>
 			<a id="loginBtn" href="loginForm">로그인</a>
 			<a id="regBtn" href="regForm">회원가입</a>
 			<a id="myPageBtn" href="myPage">마이페이지</a>
@@ -22,6 +23,7 @@
 	const regBtn = document.querySelector("#regBtn");
 	const myPageBtn = document.querySelector("#myPageBtn");
 	const logoutBtn = document.querySelector("#logoutBtn");
+	const userName = document.querySelector("#name");
 	
 		if(${sessionScope.loginInfo eq null}){
 			myPageBtn.style.display="none";
@@ -31,6 +33,7 @@
 			regBtn.style.display="none";
 			myPageBtn.style.display="block";
 			logoutBtn.style.display="block";
+			userName.innerHTML="어서오세요! ${sessionScope.loginInfo.getName()} 님😀";
 		}
 	</script>
 </body>
