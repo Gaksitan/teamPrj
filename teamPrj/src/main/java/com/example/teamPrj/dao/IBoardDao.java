@@ -11,8 +11,10 @@ import com.example.teamPrj.dto.BoardDto;
 public interface IBoardDao {
 
 	public List<BoardDto> getAllBoard();
-	public BoardDto getBoard(int bno);
+	public List<BoardDto> getBoard(int bno);
 	public void regBoard(@Param("board")BoardDto board);
 	public void deleteBoard(int bno);
+	public BoardDto getMyList(String writer);
+	public BoardDto getReceiveList(String receiver);
 	
 }
