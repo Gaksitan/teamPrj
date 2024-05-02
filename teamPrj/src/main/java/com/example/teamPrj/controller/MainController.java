@@ -121,7 +121,7 @@ public class MainController {
 		return "myList";
 	}
 	
-	@RequestMapping("/receiverList")
+	@RequestMapping("/receiveList")
 	public String receiverList(HttpServletRequest request, String receiver, Model model) {
 		HttpSession session = request.getSession();
 		MemberDto dto = (MemberDto)session.getAttribute("loginInfo");
