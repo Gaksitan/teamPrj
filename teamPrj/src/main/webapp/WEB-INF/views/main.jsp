@@ -11,7 +11,7 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
-<a style="display:none" class="btn" id="regFormBtn" href="regForm">글 작성</a>
+<a style="display:none" class="btn" id="regFormBtn" href="write">글 작성</a>
 	<table>
 		<tr>
 			<th>제목</th>
