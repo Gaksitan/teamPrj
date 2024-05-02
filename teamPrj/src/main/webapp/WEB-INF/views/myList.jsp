@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <%@ include file="header.jsp" %>
 <body>
@@ -17,9 +18,9 @@
 		<th>날짜</th>
 	</thead>
 	<thead>
-		<td>title</td>
-		<td>content</td>
-		<td>regtime</td>
+		<td>${title }</td>
+		<td>${content }</td>
+		<td>${regtime }</td>
 		<td><a href="delete?bno=${board.bno }">글 삭제</a></td>
 	</thead>
 </table>
