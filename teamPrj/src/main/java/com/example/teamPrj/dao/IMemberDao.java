@@ -14,4 +14,5 @@ public interface IMemberDao {
 	public MemberDto getMember(String id);
 	public void regMember(@Param("member")MemberDto member);
 	
+	public void updateMember(@Param("pw") String pw, @Param("name") String name, @Param("id") String id);
 }
