@@ -130,8 +130,6 @@ public class MainController {
 		MemberDto dto = (MemberDto)session.getAttribute("loginInfo");
 		receiver = dto.getId();
 		model.addAttribute("list", Bdao.getReceiveList(receiver));
-		System.out.println("xxxx");
-		System.out.println(Bdao.getReceiveList(receiver));
 		return "receiveList";
 	}
 	
