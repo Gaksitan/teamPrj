@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.teamPrj.dao.IBoardDao;
 import com.example.teamPrj.dao.IMemberDao;
@@ -133,5 +134,21 @@ public class MainController {
 		return "receiveList";
 	}
 	
+	@RequestMapping("/delete")
+	public String delete(@RequestParam("bno") String bno) {
+		int bno_ = Integer.parseInt(bno);
+		Bdao.deleteBoard(bno_);
+		
+		return "redirect:myList";
+	}
+	
+	@RequestMapping("/checkReceiverId")
+	public @ResponseBody String root(HttpServletRequest request, Model model) {
+		if(Mdao.getMember(request.getParameter("Rid")) != null) {
+			MemberDto mem = Mdao.getMember(request.getParameter("Rid"));
+			return "1";
+		}
+		return "0";
+	}
 	
 }

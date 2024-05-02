@@ -20,13 +20,15 @@
 			<th>날짜</th>
 		</tr>
 	</thead>
-	<thead>
+	<tbody>
 		<c:forEach var="board" items="${list }">
-			<td>${board.title }</td>
-			<td>${board.content }</td>
-			<td>${board.regTime }</td>
+			<tr>
+				<td>${board.title }</td>
+				<td>${board.content }</td>
+				<td>${board.regTime }</td>
+			</tr>
 		</c:forEach>
-	</thead>
+	</tbody>
 </table>
 </div>
 </body>

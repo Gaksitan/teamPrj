@@ -26,8 +26,7 @@
 			<td>${myList.title }</td>
 			<td>${myList.content }</td>
 			<td>${myList.regTime }</td>
-		
-			<td><a href="delete?bno=${board.bno }">글 삭제</a></td>
+			<td><a href="delete?bno=${myList.bno }">글 삭제</a></td>
 		</tr>
 		</c:forEach>
 	</tbody>
