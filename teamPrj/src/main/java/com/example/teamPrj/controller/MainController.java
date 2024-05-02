@@ -109,7 +109,8 @@ public class MainController {
 	}
 	
 	@RequestMapping("/myPage")
-	public String myPage() {
+	public String myPage(Model model) {
+		
 		return "myPage";
 	}
 	
@@ -129,7 +130,9 @@ public class MainController {
 		MemberDto dto = (MemberDto)session.getAttribute("loginInfo");
 		receiver = dto.getId();
 		model.addAttribute("list", Bdao.getReceiveList(receiver));
-		return "receiverList";
+		System.out.println("xxxx");
+		System.out.println(Bdao.getReceiveList(receiver));
+		return "receiveList";
 	}
 	
 	

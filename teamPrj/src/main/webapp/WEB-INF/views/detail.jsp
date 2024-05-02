@@ -16,16 +16,20 @@
 <div class="container">
 <table border="1">
 	<thead>
-		<th>제목</th>
-		<th>작성자</th>
-		<th>내용</th>
-		<th>작성날짜</th>
+		<tr>
+			<th>제목</th>
+			<th>작성자</th>
+			<th>내용</th>
+			<th>작성날짜</th>
+		</tr>
 	</thead>
 	<tbody>
-		<td>${board.title} </td>
-		<td>${board.writer} </td>
-		<td>${board.content} </td>
-		<td>${board.regTime} </td>
+		<tr>
+			<td>${board.title} </td>
+			<td>${board.writer} </td>
+			<td>${board.content} </td>
+			<td>${board.regTime} </td>
+		<tr>
 	</tbody>
 </table>
 </div>
