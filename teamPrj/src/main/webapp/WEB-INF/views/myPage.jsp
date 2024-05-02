@@ -11,7 +11,7 @@
 <body>
 <table id="table1" border="1">
 	<tr>
-		<td>아이디 : ${sessionScope.id}</td>
+		<td>아이디 : ${id}</td>
 		<td>비밀번호 : ${pw }</td>
 		<td>이름 : ${name } </td>
 		<td><a href="updateForm">내정보 수정</a></td>

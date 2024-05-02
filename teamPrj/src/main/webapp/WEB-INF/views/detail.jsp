@@ -11,8 +11,6 @@
 </head>
 <%@ include file="header.jsp" %>
 <body>
-<h1>Detail Page</h1>
-<hr>
 <div class="container">
 <table border="1">
 	<thead>
