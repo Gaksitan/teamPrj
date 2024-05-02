@@ -8,8 +8,8 @@
 </head>
 <%@ include file="header.jsp" %>
 <body>
-<h1>Receive Page</h1>
-<hr>
+
+<div class="container">
 <table border="1">
 	<thead>
 		<th>제목</th>
@@ -17,10 +17,11 @@
 		<th>날짜</th>
 	</thead>
 	<thead>
-		<td>title</td>
-		<td>content</td>
-		<td>regtime</td>
+		<td>${title }</td>
+		<td>${content }</td>
+		<td>${regtime }</td>
 	</thead>
 </table>
+</div>
 </body>
 </html>

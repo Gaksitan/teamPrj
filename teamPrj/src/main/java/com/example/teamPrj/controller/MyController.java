@@ -7,14 +7,4 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MyController {
 
 	
-	
-	@RequestMapping("/header")
-	public void root() {
-	}
-	@RequestMapping("/main")
-	public void root1() {
-	}
-	@RequestMapping("/write")
-	public void root2() {
-	}
 }

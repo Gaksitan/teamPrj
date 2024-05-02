@@ -8,8 +8,8 @@
 </head>
 <%@ include file="header.jsp" %>
 <body>
-<h1>My List Page</h1>
-<hr>
+
+<div class="container">
 <table border="1">
 	<thead>
 		<th>제목</th>
@@ -23,5 +23,6 @@
 		<td><a href="delete?bno=${board.bno }">글 삭제</a></td>
 	</thead>
 </table>
+</div>
 </body>
 </html>

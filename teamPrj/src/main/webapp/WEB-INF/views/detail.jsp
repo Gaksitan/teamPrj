@@ -12,6 +12,7 @@
 <body>
 <h1>Detail Page</h1>
 <hr>
+<div class="container">
 <table border="1">
 	<thead>
 		<th>제목</th>
@@ -26,6 +27,7 @@
 		<td>${board.regtime} </td>
 	</tbody>
 </table>
+</div>
 <div><a href="main">메인으로 가기</a></div>
 </body>
 </html>
