@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.teamPrj.dao.IBoardDao;
+import com.example.teamPrj.dao.ICommentDao;
 import com.example.teamPrj.dao.IMemberDao;
 import com.example.teamPrj.dto.BoardDto;
+import com.example.teamPrj.dto.CommentDto;
 import com.example.teamPrj.dto.MemberDto;
 
 import lombok.extern.log4j.Log4j2;
@@ -26,6 +28,9 @@ public class MainController {
 	
 	@Autowired
 	IMemberDao Mdao;
+	
+	@Autowired
+	ICommentDao Cdao;
 	
 	@RequestMapping({"/", "/main"})
 	public String root(Model model) {
@@ -106,6 +111,7 @@ public class MainController {
 	public String detail(@RequestParam("bno") String bno, Model model) {
 		int bno_ = Integer.parseInt(bno);
 		model.addAttribute("board", Bdao.getBoard(bno_));
+		model.addAttribute("commentList", Cdao.getCommentList(bno_));
 		return "detail";
 	}
 	
@@ -150,5 +156,49 @@ public class MainController {
 		}
 		return "0";
 	}
+	
+	@RequestMapping("/regLoginCheck")
+	public @ResponseBody String regLoginCheck(@RequestParam("id")String id) {
+
+		MemberDto member = Mdao.getMember(id);
+		
+		String str = "";
+		
+		if(member == null) {
+			str = "사용가능한 ID입니다.";
+		}else {
+			str = "이미 사용중인 ID입니다.";
+		}
+
+		return str;
+	}
+	
+	@RequestMapping("/regComment")
+	public String regComment(@RequestParam("comment_content") String content, HttpServletRequest request, @RequestParam("bno") String bno) {
+		CommentDto dto = new CommentDto();
+		dto.setContent(content);
+		
+		HttpSession session = request.getSession();
+		String id = (String)session.getAttribute("id");
+		dto.setWriter(id);
+		
+		int bno_ = Integer.parseInt(bno);
+		dto.setBno(bno_);
+		
+		Cdao.regComment(dto);
+		
+		return "redirect:detail?bno=" + bno;
+	}
+	
+	@RequestMapping("/deleteComment")
+	public String deleteComment(@RequestParam("cno") String cno, @RequestParam("bno") String bno) {
+		int cno_ = Integer.parseInt(cno);
+		Cdao.deleteComment(cno_);
+		
+		return "redirect:detail?bno=" + bno;
+	}
+	
+	
+	
 	
 }
