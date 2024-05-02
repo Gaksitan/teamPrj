@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
 	
->>>>>>> f53ba24 (컨트롤러 70퍼 완성)
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
 	compileOnly 'org.projectlombok:lombok'
