@@ -20,7 +20,7 @@
 	<thead>
 		<td>${title }</td>
 		<td>${content }</td>
-		<td>${regtime }</td>
+		<td>${regTime }</td>
 	</thead>
 </table>
 </div>
