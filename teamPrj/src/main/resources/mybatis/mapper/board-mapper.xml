@@ -15,4 +15,10 @@
 	<delete id="deleteBoard">
 		DELETE FROM board_tbl WHERE bno = #{bno}
 	</delete>
+	<select id="getMyList">
+		SELECT * FROM board_tbl WHERE writer= #{writer};
+	</select>
+	<select id="getReceiveList">
+		SELECT * FROM board_tbl WHERE receiver= #{receiver}; 
+	</select>
 </mapper>
