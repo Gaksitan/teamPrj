@@ -19,7 +19,7 @@ import lombok.extern.log4j.Log4j2;
 @Controller
 @Log4j2
 public class MainController {
-	
+	// 프로젝트의 규모가 커지면, 특정부분의 문제를 빠르게 찾기위해 분야별로 나눠서 컨트롤러 작성을
 	@Autowired
 	IBoardDao Bdao;
 	
@@ -28,6 +28,7 @@ public class MainController {
 	
 	@RequestMapping({"/", "/main"})
 	public String root(Model model) {
+
 		model.addAttribute("list", Bdao.getAllBoard());
 		return "main";
 	}
@@ -47,6 +48,7 @@ public class MainController {
 	@RequestMapping("/regist")
 	public String regist(@RequestParam("id") String id, @RequestParam("pw") String pw, @RequestParam("name") String name) {
 		MemberDto member = new MemberDto(id, pw, name);
+		Mdao.regMember(member);
 		return "redirect:loginForm";
 	}
 	
@@ -57,11 +59,15 @@ public class MainController {
 	
 	@RequestMapping("/login")
 	public String login(@RequestParam("id") String id, HttpServletRequest request) {
-		if(Mdao.getMember(id).equals(null)) {
+		if(Mdao.getMember(id) == null) {
 			log.info("로그인 실패.....");
 			return "loginForm";
 		}
 		HttpSession session = request.getSession();
+		MemberDto mem = Mdao.getMember(id);
+		session.setAttribute("id", mem.getId());
+		session.setAttribute("pw", mem.getPw());
+		session.setAttribute("name", mem.getName());
 		session.setAttribute("loginInfo", Mdao.getMember(id));
 		
 		log.info("로그인 성공......");
@@ -88,7 +94,7 @@ public class MainController {
 		return "redirect:list";
 	}
 	
-	@RequestMapping("/write")
+	@RequestMapping("/write") // 게시글 등록 폼
 	public String write() {
 		return "write";
 	}
@@ -102,23 +108,25 @@ public class MainController {
 	
 	@RequestMapping("/myPage")
 	public String myPage() {
-		
-		
 		return "myPage";
 	}
 	
 	@RequestMapping("/myList")
-	public String myList(@RequestParam("id") String id) {
-		
+	public String myList(HttpServletRequest request, String writer, Model model) {
+		HttpSession session = request.getSession();
+		MemberDto dto = (MemberDto)session.getAttribute("loginInfo");
+		writer = dto.getId();
+		model.addAttribute("list", Bdao.getMyList(writer));
 		
 		return "myList";
 	}
 	
 	@RequestMapping("/receiverList")
-	public String receiverList() {
-		
-		
-		
+	public String receiverList(HttpServletRequest request, String receiver, Model model) {
+		HttpSession session = request.getSession();
+		MemberDto dto = (MemberDto)session.getAttribute("loginInfo");
+		receiver = dto.getId();
+		model.addAttribute("list", Bdao.getReceiveList(receiver));
 		return "receiverList";
 	}
 	

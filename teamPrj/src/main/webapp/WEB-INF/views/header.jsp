@@ -23,7 +23,7 @@
 	const myPageBtn = document.querySelector("#myPageBtn");
 	const logoutBtn = document.querySelector("#logoutBtn");
 	
-		if(${sessionScope.id eq null}){
+		if(${sessionScope.loginInfo eq null}){
 			myPageBtn.style.display="none";
 			logoutBtn.style.display="none";
 		}else{
