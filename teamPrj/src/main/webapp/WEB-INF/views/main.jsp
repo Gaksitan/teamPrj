@@ -11,6 +11,7 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
+<a style="display:none" class="btn" id="regFormBtn" href="write">글 작성</a>
 	<table>
 		<tr>
 			<th>제목</th>
@@ -33,6 +34,7 @@
 	
 	const writers = document.querySelectorAll(".writers");
 	const aLinks = document.querySelectorAll(".titleLink");
+	const regFormBtn = document.querySelector("#regFormBtn");
 
 // 		내가 쓰거나 받은 글이 아닐 경우 제목옆에 표시
 	writers.forEach(writer=>{
@@ -53,6 +55,10 @@
 			}
 		});
 	})
+	
+	if(${sessionScope.loginInfo ne null}){
+		regFormBtn.style.display="inline-block";
+	}
 	</script>
 </body>
 </html>

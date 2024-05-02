@@ -71,7 +71,7 @@ public class MainController {
 		session.setAttribute("loginInfo", Mdao.getMember(id));
 		
 		log.info("로그인 성공......");
-		return "redirect:main";
+		return "redirect:/";
 	}
 	
 	@RequestMapping("/logout")
@@ -84,14 +84,16 @@ public class MainController {
 	}
 	
 	@RequestMapping("/registBoard")
-	public String registBoard(@RequestParam("title") String title, @RequestParam("content") String content, @RequestParam("writer") String writer, @RequestParam("receiver") String receiver) {
+	public String registBoard(@RequestParam("title") String title, @RequestParam("content") String content, @RequestParam("receiver") String receiver, HttpServletRequest request) {
 		BoardDto board = new BoardDto();
 		board.setTitle(title);
 		board.setContent(content);
-		board.setWriter(writer);
+		HttpSession session = request.getSession();
+		MemberDto dto = (MemberDto)session.getAttribute("loginInfo");
+		board.setWriter(dto.getId());
 		board.setReceiver(receiver);
 		Bdao.regBoard(board);
-		return "redirect:list";
+		return "redirect:main";
 	}
 	
 	@RequestMapping("/write") // 게시글 등록 폼
