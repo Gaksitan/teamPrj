@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+header{
+	background-color:#f1fcfe;
+	padding:20px;
+	margin-bottom:50px;
+}
+header > a{
+	text-decoration:none;
+	color:black;
+	margin: 0 50px;
+}
+header > a:hover{
+	color: #007187;
+	font-weight:bolder;
+}
+#loginBtn{
+	float:right;
+}
+#regBtn{
+	float:right;
+}
+#myPageBtn{
+	float:right;
+}
+#logoutBtn{
+	float:right;
+}
+.container{
+	width:1200px;
+	margin:0 auto;
+}
+table{
+	width:100%;
+	border:1px solid #00a7c3;
+	border-collapse:collapse;
+}
+
+th, td{
+	border:1px solid #00a7c3;
+	padding:10px;
+}
+
+table > a{
+	text-decoration:none;
+	color:black;
+	margin: 0 50px;
+}
+tbody a:hover{
+	color: #007187;
+	font-weight:bolder;
+}
+
+tbody tr:hover{
+	background-color:#f1fcfe;
+}
+form{
+	border: 1px solid lightgrey;
+	padding:30px;
+	width:500px;
+	margin: 0 auto;
+}
+.regForm input, .loginForm input, .write input{
+	width:100%;
+	padding:10px;
+	margin:10px;
+}
+.regForm a, .write a{
+	float:right;
+	text-decoration:none;
+	font-weight:bold;
+	background-color:#007187;
+	font-size:medium;
+	font-weight: bolder;
+	color:white;
+	border:1px solid black;
+}
+.regForm a:hover, .write a:hover{
+	background-color:#f1fcfe;
+	font-size:medium;
+	font-weight: bolder;
+	color:black;
+}
+.btn{
+	background-color:#007187;
+	font-size:medium;
+	font-weight: bolder;
+	color:white;
+}
+.btn:hover{
+	background-color:#f1fcfe;
+	font-size:medium;
+	font-weight: bolder;
+	color:black;
+}
+
