@@ -19,7 +19,7 @@
 	<thead>
 		<td>title</td>
 		<td>content</td>
-		<td>regdate</td>
+		<td>regtime</td>
 	</thead>
 </table>
 </body>
