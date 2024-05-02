@@ -22,9 +22,9 @@
 	</thead>
 	<thead>
 		<c:forEach var="board" items="${list }">
-		<td>${board.title }</td>
-		<td>${board.content }</td>
-		<td>${board.regTime }</td>
+			<td>${board.title }</td>
+			<td>${board.content }</td>
+			<td>${board.regTime }</td>
 		</c:forEach>
 	</thead>
 </table>

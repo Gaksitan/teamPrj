@@ -20,15 +20,17 @@
 			<th>날짜</th>
 		</tr>
 	</thead>
-	<thead>
+	<tbody>
 		<c:forEach var="myList" items="${list }">
-		<td>${myList.title }</td>
-		<td>${myList.content }</td>
-		<td>${myList.regTime }</td>
+		<tr>
+			<td>${myList.title }</td>
+			<td>${myList.content }</td>
+			<td>${myList.regTime }</td>
 		
-		<td><a href="delete?bno=${board.bno }">글 삭제</a></td>
+			<td><a href="delete?bno=${board.bno }">글 삭제</a></td>
+		</tr>
 		</c:forEach>
-	</thead>
+	</tbody>
 </table>
 </div>
 </body>
