@@ -27,13 +27,15 @@ public class MainController {
 	IMemberDao Mdao;
 	
 	@RequestMapping({"/", "/main"})
-	public String root() {
+	public String root(Model model) {
+		model.addAttribute("list", Bdao.getAllBoard());
 		return "main";
 	}
 	
 	@RequestMapping("/list")
 	public String list(Model model) {
 		model.addAttribute("list", Bdao.getAllBoard());
+		
 		return "list";
 	}
 	
