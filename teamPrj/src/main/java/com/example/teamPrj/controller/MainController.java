@@ -28,8 +28,16 @@ public class MainController {
 	
 	@RequestMapping({"/", "/main"})
 	public String root(Model model) {
+
 		model.addAttribute("list", Bdao.getAllBoard());
 		return "main";
+	}
+	
+	@RequestMapping("/list")
+	public String list(Model model) {
+		model.addAttribute("list", Bdao.getAllBoard());
+		
+		return "list";
 	}
 	
 	@RequestMapping("/regForm")
