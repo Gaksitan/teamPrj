@@ -4,12 +4,12 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.teamPrj.dao.ICommentDao">
-  <select id="getComment" resultType="com.example.teamPrj.dto.CommentDto">
+  <select id="getCommentList" resultType="com.example.teamPrj.dto.CommentDto">
     SELECT * FROM comment_tbl WHERE bno = #{bno}
   </select>
   
   <insert id="regComment">
-  	INSERT INTO comment_tbl (content, writer, bno, regtime) VALUES (#{content}, #{writer}, #{bno}, NOW())
+  	INSERT INTO comment_tbl (content, writer, bno, regtime) VALUES (#{comment.content}, #{comment.writer}, #{comment.bno}, NOW())
   </insert>
   
   <delete id="deleteComment">

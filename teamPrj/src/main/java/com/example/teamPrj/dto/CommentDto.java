@@ -15,5 +15,5 @@ public class CommentDto {
 	private String content;
 	private String writer;
 	private int bno;
-	private String regtime; 
+	private String regTime; 
 }

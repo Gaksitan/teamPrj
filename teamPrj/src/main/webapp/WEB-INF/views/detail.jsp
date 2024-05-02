@@ -33,6 +33,41 @@
 	</tbody>
 </table>
 </div>
+<h3>댓글</h3>
+<div class="container_comment">
+	<table border="1">
+		<thead>
+			<tr>
+				<th>작성자</th><th>내용</th><th>작성날짜</th>
+			</tr>
+		</thead>
+		<tbody>
+		<c:forEach var="commentList" items="${commentList }">
+			<tr>
+				<td>${commentList.writer }</td>
+				<td>${commentList.content }</td>
+				<td>${commentList.regTime }</td>
+			</tr>
+		</c:forEach>
+		</tbody>
+	</table>
+</div>
+<h3>댓글 등록 창</h3>
+<div class="container_regcomment">
+	<form action="regComment" method="post">
+	<input type="hidden" name="bno" value="${board.bno }">
+		<table border="1">
+			<tr>
+				<th>작성자</th><th>내용</th>
+			</tr>
+			<tr>
+				<td>${sessionScope.id }</td>
+				<td><input type="text" name="comment_content" placeholder="댓글 작성란"></td>
+				<td><input type="submit" value="댓글 등록"></td>
+			</tr>
+		</table>
+	</form>
+</div>
 <div><a href="main">메인으로 가기</a></div>
 </body>
 </html>
