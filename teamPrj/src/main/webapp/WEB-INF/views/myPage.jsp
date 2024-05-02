@@ -9,9 +9,18 @@
 </head>
 <%@ include file="header.jsp" %>
 <body>
-
+<table id="table1" border="1">
+	<tr>
+		<td>아이디 : ${sessionScope.id}</td>
+		<td>비밀번호 : ${pw }</td>
+		<td>이름 : ${name } </td>
+		<td><a href="updateForm">내정보 수정</a></td>
+	</tr>
+</table>
+<br>
+<br>
 <ul>
-	<li><a href="myList">내가 작성한 글로 가기</a></li><br>
+	<li><a href="myList">내가 작성한 글로 가기</a></li>
 	<li><a href="receiveList">받은 글로 가기</a></li>
 </ul>
 </body>

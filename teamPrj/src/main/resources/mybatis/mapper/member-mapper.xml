@@ -12,4 +12,7 @@
 	<insert id="regMember">
 		INSERT INTO member_tbl VALUES(#{member.id}, #{member.pw}, #{member.name});
 	</insert>
+	<update id="updateMember">
+		UPDATE member_tbl SET pw = #{pw}, name = #{name}  WHERE id = #{id}
+	</update>
 </mapper>
