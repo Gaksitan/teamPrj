@@ -13,6 +13,6 @@
   </insert>
   
   <delete id="deleteComment">
-  	DELETE FROM comment_tbl WHERE bno = #{bno}
+  	DELETE FROM comment_tbl WHERE cno = #{cno}
   </delete>
 </mapper>

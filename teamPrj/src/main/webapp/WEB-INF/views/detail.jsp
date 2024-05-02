@@ -47,6 +47,7 @@
 				<td>${commentList.writer }</td>
 				<td>${commentList.content }</td>
 				<td>${commentList.regTime }</td>
+				<td><a href="deleteComment?cno=${commentList.cno }&bno=${board.bno}">X</a></td>
 			</tr>
 		</c:forEach>
 		</tbody>

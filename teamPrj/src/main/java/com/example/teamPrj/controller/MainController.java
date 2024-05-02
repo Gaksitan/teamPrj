@@ -190,14 +190,14 @@ public class MainController {
 		return "redirect:detail?bno=" + bno;
 	}
 	
-	/*@RequestMapping("/deleteComment")
-	public String deleteComment(@RequestParam("")) {
-		
-		
+	@RequestMapping("/deleteComment")
+	public String deleteComment(@RequestParam("cno") String cno, @RequestParam("bno") String bno) {
+		int cno_ = Integer.parseInt(cno);
+		Cdao.deleteComment(cno_);
 		
 		return "redirect:detail?bno=" + bno;
 	}
-	*/
+	
 	
 	
 	
