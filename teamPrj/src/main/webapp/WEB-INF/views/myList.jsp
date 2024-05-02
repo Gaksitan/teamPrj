@@ -20,7 +20,7 @@
 		<td>title</td>
 		<td>content</td>
 		<td>regtime</td>
-		<td><a href="delete">글 삭제</a></td>
+		<td><a href="delete?bno=${board.bno }">글 삭제</a></td>
 	</thead>
 </table>
 </body>
