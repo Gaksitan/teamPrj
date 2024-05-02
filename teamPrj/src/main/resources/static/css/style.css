@@ -50,10 +50,12 @@ table > a{
 	text-decoration:none;
 	color:black;
 	margin: 0 50px;
+	
 }
 tbody a:hover{
 	color: #007187;
 	font-weight:bolder;
+	cursor:pointer;
 }
 
 tbody tr:hover{
