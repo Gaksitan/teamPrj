@@ -6,24 +6,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <%@ include file="header.jsp" %>
 <body>
+<div class="container">
 	<table>
 		<tr>
 			<th>제목</th>
 			<th>작성자</th>
 			<th>작성일자</th>
 		</tr>
-		<c:forEach var="board" items="${list}">
-			<tr>
-				<td><a href="detail?bno="${board.bno}">${board.title}</a></td>
-				<td>${board.writer}</td>
-				<td>${board.regTime}</td>
-			</tr>
-	    </c:forEach>
+		<tbody>
+			<c:forEach var="board" items="${list}">
+				<tr>
+					<td><a href="detail?bno="${board.bno}">${board.title}</a></td>
+					<td>${board.writer}</td>
+					<td>${board.regTime}</td>
+				</tr>
+		    </c:forEach>
+		 </tbody>
 	</table>
-	
+</div>	
 	<script>
 // 		내가 쓰거나 받은 글이 아닐 경우 제목 클릭시 안내창이 뜨도록하는 함수
 	
