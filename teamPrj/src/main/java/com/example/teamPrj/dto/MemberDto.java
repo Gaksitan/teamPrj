@@ -7,13 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BoardDto {
+public class MemberDto {
 
-	private int bno;
-	private String title;
-	private String content;
-	private String receiver;
-	private String writer;
-	private String regTime;
+	private String id;
+	private String pw;
+	private String name;
 	
 }
