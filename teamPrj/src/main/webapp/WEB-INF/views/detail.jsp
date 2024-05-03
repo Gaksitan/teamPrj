@@ -13,27 +13,17 @@
 <body>
 <div class="container">
 	<h1 class="page_title">게시글 상세보기</h1>
-	<a class="btn myinfobtn" href="updateBoard?bno=${board.bno}">글 수정하기</a>
-	<table class="boardTable" border="1">
-		<tbody>
-			<tr>
-				<td class="title">제목</td>
-				<td>${board.title} </td>
-			</tr>
-			<tr>
-				<td class="title">내용</td>
-				<td>${board.content} </td>
-			</tr>
-			<tr>
-				<td class="title">작성자</td>
-				<td>${board.writer} </td>
-			</tr>
-			<tr>
-				<td class="title">작성날짜</td>
-				<td>${board.regTime} </td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="overflow-hidden">
+		<a class="btn myinfobtn" href="updateBoard?bno=${board.bno}">글 수정하기</a>
+	</div>
+	<div class="boardBox">
+		<p class="title">${board.title}</p>
+		<p class="content">${board.content}</p>
+		<p class="writer_time">
+			<span>작성자 ${board.writer} </span>
+			<span>${board.regTime} </span>
+		</p>
+	</div>
 	
 	<div class="container_comment">
 	<h3 class="subTitle">댓글</h3>
