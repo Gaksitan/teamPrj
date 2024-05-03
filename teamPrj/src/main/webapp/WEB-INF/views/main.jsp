@@ -15,7 +15,7 @@
 
 <c:if test="${empty list}">
     <p class="noDataBox">※작성된 게시물이 없습니다.<br>
-    로그인 또는 회원가입을 후 글을 작성해주세요😊
+    로그인 또는 회원가입 후 글을 작성해주세요😊
 </c:if>
 <c:if test="${not empty list}">
 	<table>
