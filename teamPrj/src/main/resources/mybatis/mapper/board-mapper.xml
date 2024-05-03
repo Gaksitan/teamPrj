@@ -21,4 +21,7 @@
 	<select id="getReceiveList">
 		SELECT * FROM board_tbl WHERE receiver= #{receiver}; 
 	</select>
+	<update id="updateBoard">
+		UPDATE board_tbl set title=#{board.title}, content=#{board.content}, receiver=#{board.receiver}, regTime=now() where bno=#{board.bno};
+	</update>
 </mapper>
