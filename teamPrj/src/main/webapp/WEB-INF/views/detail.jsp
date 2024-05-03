@@ -45,7 +45,9 @@
 				<td>${commentList.writer }</td>
 				<td>${commentList.content }</td>
 				<td>${commentList.regTime }</td>
+				<c:if test="${sessionScope.id == commentList.writer }">
 				<td><a href="deleteComment?cno=${commentList.cno }&bno=${board.bno}">X</a></td>
+				</c:if>
 			</tr>
 		</c:forEach>
 		</tbody>
