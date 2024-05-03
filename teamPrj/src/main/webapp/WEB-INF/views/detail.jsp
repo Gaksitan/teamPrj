@@ -11,8 +11,6 @@
 </head>
 <%@ include file="header.jsp" %>
 <body>
-<h1>Detail Page</h1>
-<hr>
 <div class="container">
 <a href="updateBoard?bno=${board.bno}">글 수정하기</a>
 <table border="1">

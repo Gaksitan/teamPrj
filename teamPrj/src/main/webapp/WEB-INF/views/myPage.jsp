@@ -16,7 +16,7 @@
 		<table id="table1" border="1">
 			<tr>
 				<td>아이디</td>
-				<td>${sessionScope.id}</td>
+				<td>${id}</td>
 			</tr>
 			<tr>
 				<td>비밀번호</td>
