@@ -15,4 +15,8 @@
   <delete id="deleteComment">
   	DELETE FROM comment_tbl WHERE cno = #{cno}
   </delete>
+  
+  <update id="updateComment">
+  	UPDATE comment_tbl SET content = #{content} WHERE cno = #{cno}
+  </update>
 </mapper>

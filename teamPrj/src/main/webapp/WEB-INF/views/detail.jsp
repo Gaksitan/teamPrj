@@ -14,6 +14,7 @@
 <h1>Detail Page</h1>
 <hr>
 <div class="container">
+<a href="updateBoard?bno=${board.bno}">글 수정하기</a>
 <table border="1">
 	<thead>
 		<tr>
@@ -45,9 +46,10 @@
 		<c:forEach var="commentList" items="${commentList }">
 			<tr>
 				<td>${commentList.writer }</td>
-				<td>${commentList.content }</td>
+				<td id="comment_content">${commentList.content }</td>
 				<td>${commentList.regTime }</td>
 				<c:if test="${sessionScope.id == commentList.writer }">
+				<td><input type="button" value="수정" onclick="updateComment()"></td>
 				<td><a href="deleteComment?cno=${commentList.cno }&bno=${board.bno}">X</a></td>
 				</c:if>
 			</tr>
@@ -72,5 +74,11 @@
 	</form>
 </div>
 <div><a href="main">메인으로 가기</a></div>
+<script>
+	function updateComment(){
+		var comment_content = document.querySelector("#comment_content")
+		comment_content.value = "";
+	}
+</script>
 </body>
 </html>
