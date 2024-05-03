@@ -12,6 +12,12 @@
 <body>
 <div class="container">
 <a style="display:none" class="btn" id="regFormBtn" href="write">글 작성</a>
+
+<c:if test="${empty list}">
+    <p>※회원만 볼 수 있는 페이지입니다.<br>
+    로그인 또는 회원가입을 해주세요😊
+</c:if>
+<c:if test="${not empty list}">
 	<table>
 		<tr>
 			<th>제목</th>
@@ -29,7 +35,9 @@
 		    </c:forEach>
 		 </tbody>
 	</table>
+</c:if>	
 </div>	
+
 	<script>
 	
 	const writers = document.querySelectorAll(".writers");
@@ -55,6 +63,7 @@
 	if(${sessionScope.loginInfo ne null}){
 		regFormBtn.style.display="inline-block";
 	}
+	
 	</script>
 </body>
 </html>
