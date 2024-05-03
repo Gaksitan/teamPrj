@@ -15,7 +15,7 @@
 		<h1 class="page_title">글 작성</h1>
 		<input type="text" name="title" placeholder="제목">
 		<textarea rows="5" name="content" placeholder="내용"></textarea>
-		<input id="receiverId" type="text" name="receiver" placeholder="보낼사람">
+		<input id="receiverId" type="text" name="receiver" placeholder="받을사람">
 		<span class="info"></span>
 		<a id="idCheckBtn" class="btn" >아이디 체크</a>
 		<input id="submitBtn" class="btn" type="submit" value="글등록하기">

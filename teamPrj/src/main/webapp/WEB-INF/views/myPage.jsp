@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td>${pw }</td>
+				<td id="pw">${pw }</td>
 			</tr>
 			<tr>
 				<td>이름</td>
@@ -33,5 +33,16 @@
 		
 	</div>
 </div>
+<script>
+function hidePw(){
+	const pwTd = document.querySelector("#pw");
+	let pw = "${pw}";
+	let length = pw.length;
+	
+	let hiddenPw = "*".repeat(length);
+	pwTd.innerHTML = hiddenPw;
+}
+hidePw();
+</script>
 </body>
 </html>

@@ -64,9 +64,11 @@ public class MainController {
 	}
 	
 	@RequestMapping("/login")
-	public String login(@RequestParam("id") String id, HttpServletRequest request) {
+	public String login(@RequestParam("id") String id, HttpServletRequest request, Model model) {
+		boolean result = false;
 		if(Mdao.getMember(id) == null) {
 			log.info("로그인 실패.....");
+			model.addAttribute("result", result);
 			return "loginForm";
 		}
 		HttpSession session = request.getSession();
@@ -75,9 +77,10 @@ public class MainController {
 		session.setAttribute("pw", mem.getPw());
 		session.setAttribute("name", mem.getName());
 		session.setAttribute("loginInfo", Mdao.getMember(id));
-		
+		result = true;
+		model.addAttribute("result", result);
 		log.info("로그인 성공......");
-		return "redirect:/";
+		return "loginForm";
 	}
 	
 	@RequestMapping("/logout")
