@@ -10,6 +10,7 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
+<h1>로그인 화면</h1>
 	<form class="loginForm" action="login" method="post">
 		<input type="text" name="id" placeholder="아이디">
 		<input type="password" name="pw" placeholder="패스워드">
