@@ -65,9 +65,9 @@ public class MainController {
 	}
 	
 	@RequestMapping("/login")
-	public String login(@RequestParam("id") String id, HttpServletRequest request, Model model) {
+	public String login(@RequestParam("id") String id, @RequestParam("pw") String pw, HttpServletRequest request, Model model) {
 		boolean result = false;
-		if(Mdao.getMember(id) == null) {
+		if(Mdao.getMember(id) == null || !Mdao.getMember(id).getPw().equals(pw)) {
 			log.info("로그인 실패.....");
 			model.addAttribute("result", result);
 			return "loginForm";
