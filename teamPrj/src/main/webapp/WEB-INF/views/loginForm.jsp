@@ -17,5 +17,15 @@
 		<input class="btn" type="submit" value="로그인">
 	</form>
 </div>
+<script>
+if(${result ne null}){
+	if(${result eq true}){
+		alert("성공적으로 로그인이 되었습니다.");
+		location.href="/";
+	}else if(${result eq false}){
+		alert("로그인에 실패했습니다. 다시 시도 해주세요.");
+	}
+}
+</script>
 </body>
 </html>
