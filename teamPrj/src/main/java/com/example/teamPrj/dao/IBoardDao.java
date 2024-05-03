@@ -16,5 +16,7 @@ public interface IBoardDao {
 	public void deleteBoard(int bno);
 	public List<BoardDto> getMyList(String writer);
 	public List<BoardDto> getReceiveList(String receiver);
+	public void updateBoard(@Param("board")BoardDto board);
+	
 	
 }

@@ -5,11 +5,13 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.teamPrj.dao.IBoardDao;
 import com.example.teamPrj.dao.IMemberDao;
+import com.example.teamPrj.dto.BoardDto;
 import com.example.teamPrj.dto.MemberDto;
 
 @Controller
@@ -39,6 +41,16 @@ public class MyController {
 		session.setAttribute("loginInfo", Mdao.getMember(id));
 		
 		return "myPage";
+	}
+	@RequestMapping("/updateBoard")
+	public void update(@RequestParam("bno") int bno, Model model) {
+		model.addAttribute("board", Bdao.getBoard(bno));
+	}
+	@RequestMapping("/updateBoardInfo")
+	public String update(HttpServletRequest request, BoardDto board, Model model) {
+		String bno = request.getParameter("bno");
+		Bdao.updateBoard(board);
+		return "redirect:detail?bno="+bno;
 	}
 	
 	
