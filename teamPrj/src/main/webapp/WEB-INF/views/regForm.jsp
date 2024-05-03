@@ -10,6 +10,7 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
+<h1>회원가입 화면</h1>
 	<form class="regForm" action="regist" method="post" onsubmit="return regFormConfirm()">
 		<input type="text" name="id" id="id" placeholder="아이디"> 
 		<div id="demo"></div>

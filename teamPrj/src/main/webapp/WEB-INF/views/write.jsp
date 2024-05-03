@@ -10,6 +10,7 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
+<h1>글 등록 화면</h1>
 	<form class="write" action="registBoard" method="post" onsubmit="return validation()">
 		<input type="text" name="title" placeholder="제목">
 		<input type="text" name="content" placeholder="내용">
