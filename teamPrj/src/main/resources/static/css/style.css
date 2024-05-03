@@ -162,13 +162,39 @@ form{
 	margin-bottom:10px;
 	font-size:16px;
 }
-
+.overflow-hidden{
+	overflow:hidden;
+}
+.boardBox{
+	width:100%;
+	border: 1px solid #00a7c3;
+	border-radius: 15px;
+	padding:20px;
+	margin-bottom:10px;
+}
+.boardBox .title{
+	padding-bottom:15px;
+	border-bottom:1px solid #00a7c3;
+	font-size:20px;
+	font-weight:bold;
+}
+.boardBox .content{
+	padding:15px 0;
+	border-bottom:1px solid #00a7c3;
+}
+.boardBox .writer_time{
+	padding-top:15px;
+	color:#666;
+	display:flex;
+	justify-content: space-between;
+}
 .commentBox{
 	position:relative;
 	width:100%;
 	border: 1px solid lightgray;
 	border-radius: 15px;
 	padding:20px;
+	margin-bottom:10px;
 }
 .commentBox .writer{
 	font-weight:bold;
@@ -195,9 +221,7 @@ form{
 	right: 20px;	
 }
 
-.writerCommentBox{
-	
-}
+
 .writerCommentBox .writer{
 	font-weight:bold;
 	margin-bottom:5px;
