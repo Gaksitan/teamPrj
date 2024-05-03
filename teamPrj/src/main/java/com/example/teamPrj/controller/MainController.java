@@ -81,7 +81,7 @@ public class MainController {
 		result = true;
 		model.addAttribute("result", result);
 		log.info("로그인 성공......");
-		return "loginFrom";
+		return "loginForm";
 	}
 	
 	@RequestMapping("/logout")
