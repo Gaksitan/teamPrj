@@ -14,22 +14,24 @@
 <div class="container">
 	<h1 class="page_title">게시글 상세보기</h1>
 	<a class="btn myinfobtn" href="updateBoard?bno=${board.bno}">글 수정하기</a>
-	<table border="1">
-		<thead>
-			<tr>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>내용</th>
-				<th>작성날짜</th>
-			</tr>
-		</thead>
+	<table class="boardTable" border="1">
 		<tbody>
 			<tr>
+				<td class="title">제목</td>
 				<td>${board.title} </td>
-				<td>${board.writer} </td>
-				<td>${board.content} </td>
-				<td>${board.regTime} </td>
+			</tr>
 			<tr>
+				<td class="title">내용</td>
+				<td>${board.content} </td>
+			</tr>
+			<tr>
+				<td class="title">작성자</td>
+				<td>${board.writer} </td>
+			</tr>
+			<tr>
+				<td class="title">작성날짜</td>
+				<td>${board.regTime} </td>
+			</tr>
 		</tbody>
 	</table>
 	
