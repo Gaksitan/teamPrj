@@ -21,6 +21,7 @@
 	<table>
 		<tr>
 			<th>제목</th>
+			<th>받은사람</th>
 			<th>작성자</th>
 			<th>작성일자</th>
 		</tr>
@@ -28,7 +29,7 @@
 			<c:forEach var="board" items="${list}">
 				<tr>
 					<td><a class="titleLink" href="detail?bno=${board.bno}">${board.title}</a></td>
-					<td class="receivers" style="display:none">${board.receiver}</td>
+					<td class="receivers">${board.receiver}</td>
 					<td class="writers">${board.writer}</td>
 					<td>${board.regTime}</td>
 				</tr>
