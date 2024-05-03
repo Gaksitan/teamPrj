@@ -12,6 +12,11 @@
 <body>
 
 <div class="container">
+<c:if test="${empty list}">
+    <p>작성한 글이 없습니다.</p>
+</c:if>
+
+<c:if test="${not empty list}">
 <table border="1">
 	<thead>
 		<tr>
@@ -31,6 +36,8 @@
 		</c:forEach>
 	</tbody>
 </table>
+</c:if>
 </div>
+
 </body>
 </html>
