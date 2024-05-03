@@ -10,10 +10,11 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
-<h1>글 수정 화면</h1>
-	<form class="write" action="updateBoardInfo?bno=${board.bno}" method="post" onsubmit="return validation()">
+
+	<form class="updateBoardForm" action="updateBoardInfo?bno=${board.bno}" method="post" onsubmit="return validation()">
+		<h1 class="page_title">글 수정</h1>
 		<input type="text" name="title" value="${board.title}">
-		<input type="text" name="content" value="${board.content}">
+		<textarea rows="5" name="content" placeholder="내용">${board.content}</textarea>
 		<input id="receiverId" type="text" name="receiver" value="${board.receiver}">
 		<span class="info"></span>
 		<a id="idCheckBtn" class="btn" >아이디 체크</a>

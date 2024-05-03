@@ -9,25 +9,29 @@
 </head>
 <%@ include file="header.jsp" %>
 <body>
-<p><내정보></p>
-<table id="table1" border="1">
-	<tr>
-		<th>아이디</th><td> ${id}</td>
-	</tr>
-	<tr>	
-		<th>비밀번호</th><td> ${pw }</td>
-	</tr>
-	<tr>	
-		<th>이름</th><td> ${name } </td>
-	</tr>
-	<tr>	
-		<th></th><td><a href="updateForm">내정보 수정</a></td>
-	</tr>
-</table>
-<br>
-<ul>
-	<li><a href="myList">▶▶ 내가 작성한 글로 가기</a></li>
-	<li><a href="receiveList">▶▶ 받은 글로 가기</a></li>
-</ul>
+<div class="container">
+	<h1 class="page_title">마이페이지</h1>
+	<div class="mypage_container">
+		<a class="btn myinfobtn" href="updateForm">내정보 수정</a>
+		<table id="table1" border="1">
+			<tr>
+				<td>아이디</td>
+				<td>${id}</td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td>${pw }</td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td>${name }</td>
+			</tr>
+		</table>
+		<br>
+		<a class="btn" href="myList">내가 작성한 글로 가기</a>
+		<a class="btn" href="receiveList">받은 글로 가기</a>
+		
+	</div>
+</div>
 </body>
 </html>

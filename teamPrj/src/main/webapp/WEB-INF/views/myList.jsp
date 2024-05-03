@@ -12,8 +12,9 @@
 <body>
 
 <div class="container">
+<h1 class="page_title">내가 작성한 글보기</h1>
 <c:if test="${empty list}">
-    <p>작성한 글이 없습니다.</p>
+    <p class="noDataBox">작성한 글이 없습니다.</p>
 </c:if>
 
 <c:if test="${not empty list}">
@@ -31,7 +32,7 @@
 			<td>${myList.title }</td>
 			<td>${myList.content }</td>
 			<td>${myList.regTime }</td>
-			<td><a href="delete?bno=${myList.bno }">글 삭제</a></td>
+			<td><a class="btn" href="delete?bno=${myList.bno }">글 삭제</a></td>
 		</tr>
 		</c:forEach>
 	</tbody>

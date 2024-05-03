@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header>
-			<a class="home_btn" href="/">home</a>
+			<a class="home_btn" href="/">🏠 HOME</a>
 			<span id="name"></span>
 			<a id="loginBtn" href="loginForm">로그인</a>
 			<a id="regBtn" href="regForm">회원가입</a>
