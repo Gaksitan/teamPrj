@@ -52,10 +52,11 @@ public class MainController {
 	}
 	
 	@RequestMapping("/regist")
-	public String regist(@RequestParam("id") String id, @RequestParam("pw") String pw, @RequestParam("name") String name) {
+	public String regist(@RequestParam("id") String id, @RequestParam("pw") String pw, @RequestParam("name") String name, Model model) {
 		MemberDto member = new MemberDto(id, pw, name);
 		Mdao.regMember(member);
-		return "redirect:loginForm";
+		model.addAttribute("result", true);
+		return "regForm";
 	}
 	
 	@RequestMapping("/loginForm")
@@ -80,7 +81,7 @@ public class MainController {
 		result = true;
 		model.addAttribute("result", result);
 		log.info("로그인 성공......");
-		return "loginForm";
+		return "loginFrom";
 	}
 	
 	@RequestMapping("/logout")

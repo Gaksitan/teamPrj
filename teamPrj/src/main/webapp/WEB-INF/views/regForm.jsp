@@ -56,10 +56,14 @@ function regFormConfirm(){
 		alert("이름을 입력하세요");
 		return false;
 	}
-	
-	
-	
 }
+	if(${result ne null}){
+		console.log("xx");
+		if(${result eq true}){
+			alert("성공적으로 회원가입이 완료되었습니다. 로그인 화면으로 이동합니다.");
+				location.href="loginForm";
+		}
+	}
 
 
 </script>
