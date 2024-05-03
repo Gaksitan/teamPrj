@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>비밀 게시판😏</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <%@ include file="header.jsp" %>
@@ -35,43 +35,29 @@
 		</tbody>
 	</table>
 	
-	<h3 class="subTitle">댓글</h3>
 	<div class="container_comment">
-		<table border="1">
-			<thead>
-				<tr>
-					<th>작성자</th><th>내용</th><th>작성날짜</th>
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach var="commentList" items="${commentList }">
-				<tr>
-					<td>${commentList.writer }</td>
-					<td id="comment_content">${commentList.content }</td>
-					<td>${commentList.regTime }</td>
-					<c:if test="${sessionScope.id == commentList.writer }">
-					<td><input class="btn" type="button" value="수정" onclick="updateComment()"></td>
-					<td><a href="deleteComment?cno=${commentList.cno }&bno=${board.bno}">X</a></td>
-					</c:if>
-				</tr>
-			</c:forEach>
-			</tbody>
-		</table>
+	<h3 class="subTitle">댓글</h3>
+		<c:forEach var="commentList" items="${commentList }">
+			<div class="commentBox">
+				<p class="writer">${commentList.writer }</p>
+				<p class="content">${commentList.content }</p>
+				<p class="regTime">${commentList.regTime }</p>
+				<c:if test="${sessionScope.id == commentList.writer }">
+				<input class="btn upatebtn" type="button" value="수정" onclick="updateComment()">
+				<a class="btn deletebtn" href="deleteComment?cno=${commentList.cno }&bno=${board.bno}">삭제</a>
+				</c:if>
+			</div>
+		</c:forEach>
 	</div>
+	
 	<h3 class="subTitle">댓글 등록 창</h3>
-
 		<form class="regComment_form" action="regComment" method="post">
-		<input type="hidden" name="bno" value="${board.bno }">
-			<table border="1">
-				<tr>
-					<th>작성자</th><th>내용</th>
-				</tr>
-				<tr>
-					<td>${sessionScope.id }</td>
-					<td><input type="text" class="comment_content_input" name="comment_content" placeholder="댓글 작성란"></td>
-					<td><input class="btn" type="submit" value="댓글 등록"></td>
-				</tr>
-			</table>
+			<input type="hidden" name="bno" value="${board.bno }">
+			<div class="writerCommentBox">
+				<p class="writer">${sessionScope.id }</p>
+				<input type="text" class="comment_content_input" name="comment_content" placeholder="댓글 작성란">
+				<input class="btn commentWriteBtn" type="submit" value="댓글 등록">
+			</div>
 		</form>
 
 </div>
