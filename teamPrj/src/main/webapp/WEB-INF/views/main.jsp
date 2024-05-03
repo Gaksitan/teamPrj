@@ -14,8 +14,8 @@
 <a style="display:none" class="btn" id="regFormBtn" href="write">글 작성</a>
 
 <c:if test="${empty list}">
-    <p>※회원만 볼 수 있는 페이지입니다.<br>
-    로그인 또는 회원가입을 해주세요😊
+    <p class="noDataBox">※작성된 게시물이 없습니다.<br>
+    로그인 또는 회원가입을 후 글을 작성해주세요😊
 </c:if>
 <c:if test="${not empty list}">
 	<table>

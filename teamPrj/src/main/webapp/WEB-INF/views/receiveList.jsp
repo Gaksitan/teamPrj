@@ -10,10 +10,10 @@
 </head>
 <%@ include file="header.jsp" %>
 <body>
-
 <div class="container">
+<h1 class="page_title">받은 글보기</h1>
 <c:if test="${empty list }">
-	<p>받은 글이 없습니다.</p>
+	<p class="noDataBox">받은 글이 없습니다.</p>
 </c:if>
 <c:if test="${not empty list}">
 <table border="1">

@@ -150,3 +150,26 @@ form{
 	float:right;
 	margin-bottom:10px;
 }
+.noDataBox{
+	padding:40px;
+	text-align:center;
+	color:#666;
+	border:1px solid lightgrey;
+	border-radius:3px;
+}
+.subTitle{
+	margin-top:20px;
+	margin-bottom:10px;
+	font-size:16px;
+}
+.regComment_form{
+	border:none;
+	padding:0;
+	width:100%;
+	border-radius:0px;
+	margin: 0;
+}
+.comment_content_input{
+	width:100%;
+	padding:10px;
+}
