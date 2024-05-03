@@ -10,10 +10,11 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
-<h1>글 등록 화면</h1>
+
 	<form class="write" action="registBoard" method="post" onsubmit="return validation()">
+		<h1 class="page_title">글 작성</h1>
 		<input type="text" name="title" placeholder="제목">
-		<input type="text" name="content" placeholder="내용">
+		<textarea rows="5" name="content" placeholder="내용"></textarea>
 		<input id="receiverId" type="text" name="receiver" placeholder="보낼사람">
 		<span class="info"></span>
 		<a id="idCheckBtn" class="btn" >아이디 체크</a>

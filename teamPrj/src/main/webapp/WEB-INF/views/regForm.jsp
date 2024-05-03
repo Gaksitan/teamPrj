@@ -10,8 +10,8 @@
 <%@ include file="header.jsp" %>
 <body>
 <div class="container">
-<h1>회원가입 화면</h1>
 	<form class="regForm" action="regist" method="post" onsubmit="return regFormConfirm()">
+	<h1 class="page_title">회원가입</h1>
 		<input type="text" name="id" id="id" placeholder="아이디"> 
 		<div id="demo"></div>
 		<a id="idCheck" onclick="idCheck()">중복체크</a>

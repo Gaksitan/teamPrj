@@ -15,6 +15,9 @@ header > a{
 	color:black;
 	margin: 0 50px;
 }
+header .home_btn{
+	font-weight:bolder;
+}
 header > a:hover{
 	color: #007187;
 	font-weight:bolder;
@@ -34,6 +37,11 @@ header > a:hover{
 .container{
 	width:1200px;
 	margin:0 auto;
+}
+.container .page_title{
+	text-align:center;
+	font-size:24px;
+	margin:20px 0;
 }
 table{
 	width:100%;
@@ -63,39 +71,63 @@ tbody tr:hover{
 }
 form{
 	border: 1px solid lightgrey;
-	padding:30px;
+	padding:40px;
 	width:500px;
+	border-radius:3px;
 	margin: 0 auto;
 }
-.regForm input, .loginForm input, .write input{
+.regForm input, .loginForm input, .write input, .myinfoForm input ,.updateBoardForm input{
 	width:100%;
-	padding:10px;
-	margin:10px;
+	border: 0;
+	border-radius: 15px;
+	outline: none;
+	background-color: #f7f7f7;
+	padding:15px;
+	margin:15px 0;
 }
-.regForm a, .write a{
+.write textarea, .updateBoardForm textarea{
+	width:100%;
+	border: 0;
+	border-radius: 15px;
+	outline: none;
+	background-color: #f7f7f7;
+	padding:15px;
+	margin:15px 0;
+}
+.regForm #idCheck{
+	cursor:pointer;
+}
+.regForm #demo{
+	float:left;
+}
+.regForm a, .write a, .myinfoForm a, .updateBoardForm a{
 	float:right;
 	text-decoration:none;
 	font-weight:bold;
 	background-color:#007187;
 	font-size:medium;
 	font-weight: bolder;
+	padding:7px;
+	border-radius:3px;
 	color:white;
-	border:1px solid black;
 }
-.regForm a:hover, .write a:hover{
+.regForm a:hover, .write a:hover, .myinfoForm a:hover, .updateBoardForm a:hover  {
 	background-color:#f1fcfe;
 	font-size:medium;
 	font-weight: bolder;
 	color:black;
 }
 .btn{
-	background-color:#007187;
+	background-color:#007187 !important;
 	font-size:medium;
+	padding:7px;
+	border-radius:3px !important; 
+	text-decoration:none;
 	font-weight: bolder;
 	color:white;
 }
 .btn:hover{
-	background-color:#f1fcfe;
+	background-color:#f1fcfe !important;
 	font-size:medium;
 	font-weight: bolder;
 	color:black;
@@ -106,3 +138,15 @@ form{
 	padding:10px;
 }
 
+.mypage_container{
+	width:500px;
+	margin: 0 auto;
+}
+.mypage_container tr td:first-child{
+	width:30%;
+	font-weight:bold;
+}
+.myinfobtn{
+	float:right;
+	margin-bottom:10px;
+}
