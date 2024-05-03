@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>비밀 게시판😏</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <%@ include file="header.jsp" %>
